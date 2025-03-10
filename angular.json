@@ -5,10 +5,14 @@
   "projects": {
     "garden": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "bus",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
@@ -27,7 +31,7 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/custom-theme.scss"
             ],
             "scripts": []
           },
@@ -92,5 +96,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "c40db0ca-7789-494d-a739-e2c744683158"
   }
 }
